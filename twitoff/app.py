@@ -95,7 +95,7 @@ def create_app():
             tweet_text = request.values['tweet_text']
             prediction = predict_user(user0, user1, tweet_text)
             message = '''"{}" is more likely to be said
-                         by {user0} than {user1}.'''.format(tweet_text,
+                         by {} than {}.'''.format(tweet_text,
                                                             user1 if prediction else user0,
                                                             user0 if prediction else user1)
         

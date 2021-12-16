@@ -34,10 +34,10 @@ def predict_user(user0_username, user1_username, hypo_tweet_text):
 
     # Train our logistic regression
     # instantiating the class to create a LR object
-    log_reg = LogisticRegression
+    log_reg = LogisticRegression()
 
     # Fit the model to the data
-    log_reg.fit(vects, labels)
+    log_reg.fit(X=vects, y=labels)
 
     # generate a prediction for our hypothetical tweet text
     # vectorize my hypothetical tweet text
